@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 api=Api(app)
-client = MongoClient(os.getenv("CUSTOMCONNSTR_myconnectionstring")) #host uri
+client = MongoClient("mongodb://testingmango:ly9YoADp1IjT1jUa1XzMBoFTKzxuzsClptDcgJ7eOIOcJ6kbRZkWTMj2uZD4OmRhSXWFTxK5SKmNNZibQmZTOw==@testingmango.documents.azure.com:10255/?ssl=true&replicaSet=globaldb") #host uri
 db = client.admin
 #db.authenticate(name=os.getenv("MONGO_USERNAME"),password=os.getenv("MONGO_PASSWORD"))
 col=db["banking"]
