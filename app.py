@@ -6,9 +6,9 @@ import os
 
 app = Flask(__name__)
 api=Api(app)
-client = MongoClient(os.getenv("MONGOURL")) #host uri
+client = MongoClient(os.getenv("CUSTOMCONNSTR_myconnectionstring")) #host uri
 db = client.admin
-db.authenticate(name=os.getenv("MONGO_USERNAME"),password=os.getenv("MONGO_PASSWORD"))
+#db.authenticate(name=os.getenv("MONGO_USERNAME"),password=os.getenv("MONGO_PASSWORD"))
 col=db["banking"]
 
 
