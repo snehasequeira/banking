@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 api=Api(app)
-client = MongoClient("mongodb://testbanking.documents.azure.com/?ssl=true") #host uri
+client = MongoClient("mongodb://testbanking.documents.azure.com:10255/?ssl=true") #host uri
 db = client.admin
 db.authenticate(name="testbanking",password="XJ8K5IQqUIDEdwGrLamuJbbGLkYP26WXCQoyiTHjDpT4oP9kOrOtWyuyx9BFd1kBUtH5S0dMto89lowBXRJHLA==")
 col=db["banking"]
